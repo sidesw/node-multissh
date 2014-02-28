@@ -1,0 +1,11 @@
+{
+  "name": "multissh",
+  "version": "0.0.1",
+  "description": "A utility for running commands remotely on multiple servers using SSH",
+  "author": "sidesw <sidesw@github.com>",
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
