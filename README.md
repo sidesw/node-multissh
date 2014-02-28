@@ -17,4 +17,4 @@ Not supported:
   - Password based auth
   - Interactive command line apps (that require input from stdin)
   - Command line apps that use ncurses
-
+  - Auto-complete
