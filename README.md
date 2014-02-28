@@ -3,9 +3,14 @@ node-multissh
 
 A multi-server ssh utility similar to cap shell.
 
+###To install:
+```zsh
+  git clone https://github.com/sidesw/node-multissh.git
+  cd node-multissh && npm install -g
+```
 ###To run:
 ```zsh
-  node lib/index.js tom dick harry [ -c cmd ]
+  multissh tom dick harry [ -c cmd ]
 ```
 
 ###Currently supported:
