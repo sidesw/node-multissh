@@ -1,7 +1,7 @@
 node-multissh
 ============
 
-A multi-server ssh utility similar to cap shell.
+A multi-server SSH utility similar to cap shell.
 
 ###To install:
 ```zsh
@@ -10,14 +10,14 @@ A multi-server ssh utility similar to cap shell.
 ```
 ###To run:
 ```zsh
-  multissh tom dick harry [ -c cmd ]
+  multissh [-u username] [-p port] tom dick harry [-c cmd]
 ```
 
 ###Currently supported:
   - Running shell commands remotely and printing the output server wise
-  - Does not spawn new ssh everytime
+  - Does NOT spawn a new SSH process for every command
   - Only key based auth
-  - Assumes ssh config resides in ~/.ssh/config
+  - Assumes ssh config resides in ```~/.ssh/config``` and default key is ```~/.ssh/id_rsa```
 
 ###Not supported:
   - Password based auth
@@ -25,3 +25,16 @@ A multi-server ssh utility similar to cap shell.
   - Command line apps that use ncurses
   - Auto-complete
   - Running commands as sudo
+
+### Sample output
+```zsh
+$ multissh tom dick harry
+node-multissh $ hostname
+tom    : tom.example.com
+dick   : dick.example.com
+harry  : harry.example.com
+node-multissh $ exit
+ssh to tom exited with code 0
+ssh to dick exited with code 0
+ssh to harry exited with code 0
+```
